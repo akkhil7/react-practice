@@ -33,10 +33,11 @@ function Orderbook() {
           newAsks = change[0] !== "buy" ? updatedArr : stateRef.current.asks;
         });
 
-        setState({
-          asks: newAsks,
-          bids: newBids,
-        });
+        // Problematic line here
+        // setState({
+        //   asks: newAsks,
+        //   bids: newBids,
+        // });
         break;
       default:
         console.log(type);
